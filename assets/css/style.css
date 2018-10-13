@@ -1,0 +1,26 @@
+body {
+    background-image: url(../images/background.png)
+}
+#header {
+    background: rgb(243, 135, 12);
+}
+
+#instructions {
+    background: rgb(253, 218, 171);
+    color:  darkgreen;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+#total {
+    background: green;
+    color: rgb(83, 2, 83);
+    font-weight: bold;
+    font-size: 250%;
+}
+
+#score {
+    background: rgb(14, 212, 212);
+    font-weight: bold;
+    font-size: 125%;
+}
