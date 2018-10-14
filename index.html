@@ -8,6 +8,8 @@
         crossorigin="anonymous">
     <title>Crystals Collector Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type=text/javascript src="assets/javascript/game.js"></script>
 </head>
 
 <body>
@@ -35,17 +37,43 @@
     <div class="container">
         <div class="row">
             <div id="total" class="col-lg-3 text-center">
-                <p>45</p>
+                <p id="RNG"></p>
+                <!--fill rng-->
             </div>
-            <div id="score" class="col-lg-2 ml-3">
+            <div id="game-tally" class="col-lg-2 ml-3">
                 <p>Wins: </p>
                 <p>Losses: </p>
             </div>
         </div>
     </div>
-    
+    <div class="container">
+        <div class="row">
+            <!--line up images at the end-->
+            <div id="crystals" class="col-lg-4 mt-2">
+                <img class="" id="blue-gem" src="assets/images/blue.png" alt="blue gem" />
+                <img class="" id="red-gem" src="assets/images/red.png" alt="red gem" />
+                <img class="" id="green-gem" src="assets/images/green.png" alt="green gem" />
+                <img class="" id="yellow-gem" src="assets/images/yellow.png" alt="yellow gem" />
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div id="total-score" class="col-lg-3">
+                <!--scorecard-->
+                Your total score is:
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2">
+        <div class="row">
+            <div id="score" class="col-lg-3" style="height:100px;">
+                <!--score updated here-->
+            </div>
+        </div>
+    </div>
+
 
 </body>
-
 
 </html>

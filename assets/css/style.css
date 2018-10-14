@@ -19,8 +19,19 @@ body {
     font-size: 250%;
 }
 
-#score {
+#game-tally {
     background: rgb(14, 212, 212);
     font-weight: bold;
     font-size: 125%;
 }
+
+#total-score {
+    background: teal;
+    color: white;
+}
+
+#score {
+    background: teal;
+    color: white;
+}
+
