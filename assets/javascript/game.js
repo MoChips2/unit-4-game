@@ -1,15 +1,29 @@
+
 // random number generated from 19-120
 $(document).ready(function () {
 
     // random number to be shown at start of game from 19-120
     var randomNumber = Math.floor(Math.random() * 102) + 19;
+    function resetNum() {
+        randomNumber = Math.floor(Math.random() * 102) + 19;
+        $("#RNG").text(randomNumber);
+    }
+
+    function gemNum() {
+       return Math.floor(Math.random() * 12) + 1;
+    }
+    var num1 = gemNum();
+    var num2 = gemNum();
+    var num3 = gemNum();
+    var num4 = gemNum();
 
     //create random number 1-12 for each crystal
-    var num1 = Math.floor(Math.random() * 12) + 1;
-    var num2 = Math.floor(Math.random() * 12) + 1;
-    var num3 = Math.floor(Math.random() * 12) + 1;
-    var num4 = Math.floor(Math.random() * 12) + 1;
-
+    function rng() {
+    num1 = gemNum();
+    num2 = gemNum();
+    num3 = gemNum();
+    num4 = gemNum();
+    }
 
     //storing score and total values here
     var totalScore = 0;
@@ -48,16 +62,26 @@ $(document).ready(function () {
     function game() {
         if (totalScore === randomNumber) {
             winCount++;
+            $("#result").text("You Won!");
             $("#Wins").text(winCount);
-            console.log(winCount);
-        } else (totalScore > randomNumber) {
-            loseCount++;
-            $("#Losses").text(loseCount);
-        }
-    }
+            totalScore = 0;
+            $("#score").text(totalScore);
+            resetNum();
+            rng();
+        }    
     // when user score is greater than gem number, you lose
+        else if (totalScore > randomNumber) {
+            loseCount++;
+            $("#result").text("You Lost!")
+            $("#Losses").text(loseCount);
+            totalScore = 0;
+            $("#score").text(totalScore);
+            resetNum();
+            rng();
+        } 
+    }
+    
     // tally wins and loses
-
-
+    // create a reset function upon win/loss
 
 });
